@@ -1,9 +1,8 @@
 pipeline {
     agent any
-    environment {
-        HTTP_PROXY = 'http://bds:blackduck@us1a-qa-ssl-proxy01.nprd.sig.synopsys.com:3130/'
-        NO_PROXY = 'https://example.com,http://10.0.0.95'
-    }
+    // environment {
+    //     BLACKDUCK_TRUST_CERT=true
+    // }
     stages {
         stage("unit-test") {
             steps {
@@ -15,14 +14,13 @@ pipeline {
                 echo 'FUNCTIONAL TEST EXECUTION STARTED'
             }
         }
-        
-       stage("synopsys-security-scan") {
-            steps {
-                echo 'SYNOPSYS SECURITY SCAN EXECUTION STARTED'
-                
-                synopsys_scan synopsys_security_product: 'blackduck', blackduck_url: "${env.BLACKDUCK_URL}", blackduck_api_token: "${env.BLACKDUCK_TOKEN}",
-                polaris_application_name: "test_jenkins", polaris_project_name: "springboot-pipeline-test", polaris_assessment_types: "SCA",  
-                synopsys_bridge_download_version: "1.0.0"
+        stage("synopsys-security-scan") {
+          steps {
+              	echo 'SYNOPSYS SECURITY SCAN EXECUTION STARTED'
+
+                script {
+                   synopsys_scan product:'blackduck', blackduck_url: 'https://testing.blackduck.synopsys.com/', blackduck_token: 'NjRhYTY5ZTEtY2M4ZS00YzQ5LTgwZWItMGViNTljYmYxYjc0OjNmZmQ1YzRhLTI3ZGQtNGNmMi05OTM5LWY0MTRjMzdmZjk1Mw==', blackduck_automation_prcomment: false, synopsys_bridge_download_version: '1.1.0'
+                }	
             }
         }
         stage("build") {
