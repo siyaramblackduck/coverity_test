@@ -19,7 +19,7 @@ pipeline {
               	echo 'SYNOPSYS SECURITY SCAN EXECUTION STARTED'
 
                 script {
-                   synopsys_scan product:'blackduck', blackduck_url: 'https://testing.blackduck.synopsys.com/', blackduck_token: 'NjRhYTY5ZTEtY2M4ZS00YzQ5LTgwZWItMGViNTljYmYxYjc0OjNmZmQ1YzRhLTI3ZGQtNGNmMi05OTM5LWY0MTRjMzdmZjk1Mw==', blackduck_automation_prcomment: false, synopsys_bridge_download_version: '1.1.0'
+                   synopsys_scan product:'blackduck', blackduck_url: 'https://testing.blackduck.synopsys.com/', blackduck_token: 'NjRhYTY5ZTEtY2M4ZS00YzQ5LTgwZWItMGViNTljYmYxYjc0OjNmZmQ1YzRhLTI3ZGQtNGNmMi05OTM5LWY0MTRjMzdmZjk1Mw==', blackduck_automation_prcomment: false
                 }	
             }
         }
