@@ -21,7 +21,7 @@ pipeline {
               	echo 'SYNOPSYS SECURITY SCAN EXECUTION STARTED'
 
                 script {
-                    synopsys_scan product: "POLARIS", polaris_assessment_types: "SAST", polaris_application_name: "test_jenkins", polaris_project_name: "springboot-pipeline-test", polaris_branch_name: "main", polaris_access_token: 'rksncmk4it4av0ndrm0eq1i2u3hrhfvimmd48dsua96ov0vreeohevhutb0qt8ks47hgcf920e5pm'
+                    synopsys_scan product: "POLARIS", polaris_assessment_types: "SCA", polaris_application_name: "test_jenkins", polaris_project_name: "springboot-pipeline-test", polaris_branch_name: "main", polaris_access_token: 'rksncmk4it4av0ndrm0eq1i2u3hrhfvimmd48dsua96ov0vreeohevhutb0qt8ks47hgcf920e5pm'
                 }	
             }
         }
