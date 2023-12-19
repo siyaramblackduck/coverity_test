@@ -19,7 +19,7 @@ pipeline {
               	echo 'SYNOPSYS SECURITY SCAN EXECUTION STARTED'
 
                 script {
-                   synopsys_scan product:'blackduck', blackduck_url: 'https://testing.blackduck.synopsys.com/', blackduck_token: 'NjRhYTY5ZTEtY2M4ZS00YzQ5LTgwZWItMGViNTljYmYxYjc0OjNmZmQ1YzRhLTI3ZGQtNGNmMi05OTM5LWY0MTRjMzdmZjk1Mw==', blackduck_automation_prcomment: false, github_token: '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'
+                    synopsys_scan product: "POLARIS", polaris_assessment_types: "SAST", polaris_application_name: "test_jenkins", polaris_project_name: "springboot-pipeline-test", polaris_branch_name: "main"
                 }	
             }
         }
