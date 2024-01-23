@@ -1,5 +1,5 @@
 node {
-   checkout scm
+   // checkout scm
    stage("unit-test") {
             echo 'UNIT TEST EXECUTION STARTED'
         }
