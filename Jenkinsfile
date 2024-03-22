@@ -9,7 +9,7 @@ node {
         
        stage("synopsys-security-scan") {
               echo 'SYNOPSYS SECURITY SCAN EXECUTION STARTED'
-               synopsys_scan product: 'coverity', coverity_automation_prcomment: true
+               synopsys_scan product: 'coverity'
         }
         
         stage("build") {
