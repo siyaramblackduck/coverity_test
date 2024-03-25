@@ -18,7 +18,8 @@ pipeline {
 
                 script {
                    synopsys_scan product:'coverity',
-                       coverity_automation_prcomment: true
+                       coverity_automation_prcomment: true,
+                       include_diagnostics: true
                 }	
             }
         }
