@@ -21,4 +21,5 @@ jobs:
 #           blackduck_fixpr_enabled: true    
           ### PULL REQUEST COMMENTS: Uncomment below to enable
           # polaris_prComment_enabled: true 
+          
           github_token: ${{ secrets.GITHUB_TOKEN }} # Required when PR comments is enabled
