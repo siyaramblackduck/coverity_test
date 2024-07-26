@@ -12,12 +12,11 @@ pipeline {
                 echo 'FUNCTIONAL TEST EXECUTION STARTED'
             }
         }
-        stage("synopsys-security-scan") {
-          steps {
-              	echo 'SYNOPSYS SECURITY SCAN EXECUTION STARTED'
-
-                script {
-                   synopsys_scan product:'blackduck'
+        stage("Coverity Issue Check") {
+            {
+              
+                steps {
+                  coverityIssueCheck coverityInstanceUrl: 'https://integrations-qa.dev.coverity.synopsys.com/', markUnstable: true, projectName: 'bitbucket_nodejs_goof_e2e_testing', viewName: 'High Impact Outstanding'
                 }	
             }
         }
