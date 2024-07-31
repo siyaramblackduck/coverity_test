@@ -4,7 +4,7 @@ pipeline {
     stages{
         stage("Coverity Issue Check") {       
                 steps {
-                  coverityIssueCheck coverityInstanceUrl: 'https://integrations-qa.dev.coverity.synopsys.com/', projectName: 'E2E_Integrations_Project_gitlab_macos', viewName: "High Impact Outstanding"
+                  coverityIssueCheck coverityInstanceUrl: 'https://integrations-qa.dev.coverity.synopsys.com/', projectName: 'E2E_Integrations_Project_gitlab_macos',  viewName: 'Outstanding Issues'
                 }	
         }
     }
