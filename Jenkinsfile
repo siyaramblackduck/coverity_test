@@ -4,7 +4,7 @@ pipeline {
     stages{
         stage("Coverity Issue Check") {       
                 steps {
-                  coverityIssueCheck coverityInstanceUrl: 'https://integrations-qa.dev.coverity.synopsys.com/', projectName: 'coverity_test', viewName: 'My Outstanding'
+                  coverityIssueCheck coverityInstanceUrl: 'https://integrations-qa.dev.coverity.synopsys.com/', projectName: 'coverity_test', viewName: 'Outstanding Untriaged'
                 }	
         }
     }
