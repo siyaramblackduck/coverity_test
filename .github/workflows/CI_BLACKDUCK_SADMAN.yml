@@ -9,9 +9,8 @@ jobs:
     runs-on: [ ubuntu-latest ]
     steps:
       - name: Checkout Source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
       - name: Black Duck Full Scan
-        if: ${{ github.event_name != 'pull_request' }}
         uses: synopsys-sig/synopsys-action@v1.11.0
         ### Use below configuration to set specific detect environment variables
         env:
