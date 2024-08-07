@@ -29,9 +29,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Coverity Full Scan
-        if: ${{ github.event_name != 'pull_request' }}
         # Use the action defined in this repository
-        uses: synopsys-sig/synopsys-action@SIGINT-2008
+        uses: synopsys-sig/synopsys-action@v1.11.0
         with:
           coverity_url: ${{ secrets.COVERITY_URL }}
           coverity_user: ${{ secrets.COVERITY_USER }}
@@ -42,10 +41,10 @@ jobs:
           # coverity_repository_name: ${{ secrets.COVERITY_REPOSITORY_NAME }}
           # coverity_branch_name: ${{ secrets.COVERITY_BRANCH_NAME }}
           #coverity_local: true
-          coverity_args: -c /Users/siyaram/Downloads/SynopsysTestConfig/coverity.yml -o capture.build.clean-command="mvn clean" -- mvn clean install
-          coverity_build_command: mvn clean install
-          coverity_clean_command: mvn clean
-          coverity_config_path: /Users/siyaram/Downloads/SynopsysTestConfig/application.properties
+          # coverity_args: -c /Users/siyaram/Downloads/SynopsysTestConfig/coverity.yml -o capture.build.clean-command="mvn clean" -- mvn clean install
+          # coverity_build_command: mvn clean install
+          # coverity_clean_command: mvn clean
+          # coverity_config_path: /Users/siyaram/Downloads/SynopsysTestConfig/application.properties
 
           # Mandatory for windows hosted environment
           # coverity_install_directory: "/root"
