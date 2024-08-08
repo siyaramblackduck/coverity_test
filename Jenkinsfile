@@ -1,8 +1,5 @@
 pipeline {
    agent{label 'siyaram_mac'}
- tools {
-        jdk 'jdk-11'
-    }
     stages{
         stage("Coverity Issue Check") {       
                 steps {
