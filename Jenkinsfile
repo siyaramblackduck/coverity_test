@@ -1,5 +1,5 @@
 pipeline {
-   agent any
+    agent{label 'siyaram_mac'}
     stages{
         stage("Coverity Issue Check") {       
                 steps {
