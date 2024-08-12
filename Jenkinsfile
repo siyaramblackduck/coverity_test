@@ -3,8 +3,7 @@ pipeline {
     stages{
         stage("Coverity Issue Check") {       
                 steps {
-                  coverityIssueCheck coverityInstanceUrl: 'https://integrations-qa.dev.coverity.synopsys.com/', projectName: 'E2E_Integrations_Project_gitlab_macos',markUnstable: true, viewName: 'Outstanding Issues'
-                }	
+                  coverityIssueCheck coverityInstanceUrl: 'https://integrations-qa.dev.coverity.synopsys.com/', projectName: 'bitbucket_nodejs_goof_e2e_testing', viewName: 'High Impact Outstanding',markUnstable: true
         }
     }
 }
