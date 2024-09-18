@@ -17,7 +17,7 @@ pipeline {
                         // polaris_access_token: 'POLARIS_TOKEN', 
                         // bitbucket_token: 'BITBUCKET_TOKEN', // Used for PR comment. Use github_token for GitHub or gitlab_token for GitLab
                         // bitbucket_username:'BITBUCKET_USERNAME' // Used for bitbucket cloud pr comment if app password is set as bitbucket_token 
-                            polaris_assessment_types: 'SCA',
+                            polaris_assessment_types: 'SAST,SCA',
                             polaris_prComment_enabled: true,
                             polaris_application_name: 'github_test', 
                             polaris_project_name: 'github_test'
