@@ -21,6 +21,8 @@ pipeline {
     
                         // Pull Request Comments
                          polaris_prComment_enabled: true
+                         polaris_application_name: 'github_test', 
+                       p olaris_project_name: 'github_test',
     
                         // SARIF report generation
                         //  polaris_reports_sarif_create: true
