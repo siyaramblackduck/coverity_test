@@ -10,9 +10,6 @@ pipeline {
                    synopsys_scan product:'polaris', polaris_prComment_enabled: true
 
                 }	
-            }
-        }
-    }
         }
 }
 }
